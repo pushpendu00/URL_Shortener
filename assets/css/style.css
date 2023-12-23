@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+}
+nav{
+    height: 8vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 30px;
+    background-color: aquamarine;
+
+}
+#log-out-btn{
+    cursor: pointer;
+    margin-right: 3rem;
+}
+#log-out-btn:hover{
+    color: rgb(244, 24, 24);
+}
+main{
+    height: 92vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: aqua; */
+    & h2{
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        font-size: 40px;
+    }
+    & form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 60%;
+        & div{
+            height: 50px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid black;
+            border-radius: 10px;
+            & input{
+                height: 100%;
+                width: 97%;
+                font-size: 25px;
+                outline: none;
+                border: none;
+            }
+        }
+        & button{
+            height: 50px;
+            width: 150px;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+            border: 1.5px solid black;
+            font-size: 25px;
+            cursor: pointer;
+            background-color: rgb(96, 96, 255);
+            color: white;
+        }
+    }
+}
+form button:hover{
+    background-color: rgb(49, 49, 255);
+}
+
+#list-of-link{
+    height: auto;
+    width: 70%;
+    & .each-link-div{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        text-align: justify;
+        & div{
+            width: 50%;
+            overflow-x: hidden;
+            display: flex;
+            justify-content: center;
+            text-align: justify;
+            & a{
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.each-link-div div a:hover{
+    color: blue;
+}
+#each-link-div-head{
+    width: 100%;
+    display: flex;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    & div{
+        width: 50%;
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+    }
+}
+
+#is-empyu-url-list{
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+}

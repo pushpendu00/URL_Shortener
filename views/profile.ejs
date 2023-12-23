@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Profile
+    </title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://ajax.aspnetCDN.com/ajax/jQuery/jQuery-3.3.1.min.js"></script>
+</head>
+<body>
+
+    <nav>
+        <%= user.userName %> | <span id="log-out-btn" onclick="logOutFun()">&nbsp;Log Out</span>
+    </nav>
+
+    <main>
+        <h2>Create Short Url</h2>
+        <form action="/shorten" method="post">
+            <div>
+                <input type="text" placeholder="Enter url" name="original_url" required>
+            </div><br><br>
+            <button type="submit">Create</button>
+        </form><br>
+        <div id="list-of-link">
+            <div id="each-link-div-head">
+                <div>Original</div>
+                <div>Shorted</div>
+            </div>
+            <% if(all_url.length>0){ %>
+                <% for(i of all_url){ %>
+                    <div class="each-link-div">
+                        <div><a href="<%= i.originalUrl %>"><%= i.originalUrl %></a></div>
+                        <div><a href="/<%= i.shortUrl %>"><%= i.shortUrl %></a></div>
+                    </div><br>
+                <% } %>
+            <% }else{ %>
+                <div id="is-empyu-url-list">Empty List</div>
+            <% } %>
+        </div>
+
+    </main>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>
+
+
